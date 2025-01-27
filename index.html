@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover innovative music and collaborations that shape the future sound.">
+    <meta name="keywords" content="music label, sound innovation, artist collaboration, future music, modern music, innovative music">
+    <meta name="author" content="Zenit Records">
+    <link rel="icon" href="./icon.ico" type="image/x-icon">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Zenit Records | Innovating Music & Shaping the Future Sound">
+    <meta property="og:description" content="Bringing together innovation and creativity, collaborating with groundbreaking artists to shape the future of music.">
+    <meta property="og:image" content="./og-image.jpg">
+    <meta property="og:url" content="https://zenitrecords.com">
+    <title>Zenit Records | Innovating Music & Shaping the Future Sound</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #F5F5F5;
+            --background-color: #0A0A0A;
+            --accent-color: #BA602B;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAElBMVEUAAAD8/vz08vT09PT8/Pz///+Yb0mYAAAAA3RSTlMAf4C/aSLHAAAAQElEQVQ4y2NgGAWjYBRgAbxJRGFGEYVJRGEmEYXJRAqTiRQmEylMJlKYTKQwmUhhMpHCZCKFyUQKk4kUHgWDGwAA5/Mcv1mbi0IAAAAASUVORK5CYII=');
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .language-btn {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover, .language-btn.active {
+            background: var(--primary-color);
+            color: var(--background-color);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 85vh;
+            position: relative;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .coming-soon {
+            font-weight: 300;
+            opacity: 0.7;
+            font-size: 1.1rem;
+            margin-top: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: rgba(245, 245, 245, 0.8);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .social-links a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: var(--accent-color);
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #333 10%, transparent 50%);
+            mix-blend-mode: lighten;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: transform 0.05s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="glow"></div>
+    <div class="container">
+        <nav>
+            <div class="logo">ZENIT RECORDS</div>
+            <div class="language-switcher">
+                <button class="language-btn active" onclick="changeLanguage('en')">EN</button>
+                <button class="language-btn" onclick="changeLanguage('tr')">TR</button>
+            </div>
+        </nav>
+        
+        <main class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title" id="title">Discover the Sound of Tomorrow</h1>
+                <p class="hero-description" id="description">Bringing together innovation and creativity, collaborating with groundbreaking artists to shape the future of music.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                </div>
+                <p class="coming-soon" id="coming-soon">Launching Soon</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const glow = document.querySelector('.glow');
+        document.addEventListener('mousemove', (e) => {
+            const glowSize = 50;
+            glow.style.transform = `translate(${e.clientX - glowSize}px, ${e.clientY - glowSize}px)`;
+        });
+
+        const translations = {
+            en: {
+                comingSoon: 'Launching Soon',
+                title: 'Discover the Sound of Tomorrow',
+                description: 'Bringing together innovation and creativity, collaborating with groundbreaking artists to shape the future of music.'
+            },
+            tr: {
+                comingSoon: 'Yakında Sizlerle',
+                title: 'Yarının Sesini Keşfedin',
+                description: 'Yenilik ve yaratıcılığı bir araya getirerek, müziğin geleceğini şekillendirmek için çığır açan sanatçılarla işbirliği yapıyoruz.'
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.getElementById('coming-soon').textContent = translations[lang].comingSoon;
+            document.getElementById('title').textContent = translations[lang].title;
+            document.getElementById('description').textContent = translations[lang].description;
+
+            document.documentElement.lang = lang;
+
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.language-btn[onclick="changeLanguage('${lang}')"]`).classList.add('active');
+        }
+
+        const browserLang = navigator.language.split('-')[0];
+        const initialLang = translations[browserLang] ? browserLang : 'en';
+        changeLanguage(initialLang);
+    </script>
+</body>
+</html>
